@@ -2,7 +2,7 @@ import './App.css'
 
 function App() {
   const whatsappNumber = '5363669630'
-  const whatsappMessage = 'Hola soy un cliente vengo desde la Web'
+  const whatsappMessage = 'Hola soy un cliente vengo desde la Web , me gustaria saber mas sobre sus servicios'
 
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage,
@@ -28,7 +28,7 @@ function App() {
       <header className="top-nav">
         <div className="top-nav-inner">
           <div className="brand">
-            <span className="brand-mark">C</span>
+            <span className="brand-mark"></span>
             <span className="brand-text">
               <span className="brand-title">Cristal Caribe</span>
               <span className="brand-subtitle">Aluminio y cristalería</span>
