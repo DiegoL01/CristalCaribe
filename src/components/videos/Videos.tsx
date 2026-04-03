@@ -1,9 +1,4 @@
 
- 
- 
- 
-
-
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -16,23 +11,28 @@ export const Videos = () => {
   const videoLinks = [
     {
       title: 'Puerta corrediza de aluminio y cristal',
-      url: 'https://www.facebook.com',
+      url: 'https://www.facebook.com/share/p/1AUXpwVcEi/',
+      img:"/videos/trabajo bano.png",
     },
     {
       title: 'Ventanas modernas para sala y balcones',
-      url: 'https://www.facebook.com',
+      url: 'https://fb.watch/GfwzXaO9ca/',
+      img:"/videos/acabadoCasa.jpeg",
     },
     {
       title: 'Instalación completa de cristalería en cocina',
-      url: 'https://www.facebook.com',
+      url: 'https://fb.watch/GfwLrujELi/',
+      img:"/videos/trabajandoV.jpeg",
     },
     {
       title: 'Barandal de cristal con acabados premium',
-      url: 'https://www.facebook.com',
+      url: 'https://www.facebook.com/share/p/18E17uxXvL/',
+      img:"/videos/baranda.jpeg",
     },
     {
       title: 'Closets de cristal y aluminio',
-      url: 'https://www.facebook.com',
+      url: 'https://www.facebook.com/share/p/1NAeJRPmuk/',
+      img:"/videos/closet.jpeg",
     },
   ]
 
@@ -90,6 +90,7 @@ export const Videos = () => {
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
               <div className="video-thumbnail-placeholder">
+                <img src={videoLinks[currentIndex].img} alt={videoLinks[currentIndex].title} loading='lazy' />
                 <span className="video-play-icon">▶</span>
               </div>
               <p className="video-title">{videoLinks[currentIndex].title}</p>
