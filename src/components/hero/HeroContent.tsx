@@ -36,6 +36,7 @@ export const HeroContent = ({ whatsappLink }: { whatsappLink: string }) => {
                 <span className="badge">Transporte en la Habana</span>
                 <span className="badge">Montaje incluido</span>
             </div>
+            
         </div>
     )
 }

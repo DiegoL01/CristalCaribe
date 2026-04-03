@@ -14,12 +14,10 @@
   top: 0;
   z-index: 40;
   backdrop-filter: blur(18px);
-  background: linear-gradient(
-    to bottom,
-    rgba(3, 7, 18, 0.92),
-    rgba(3, 7, 18, 0.7),
-    transparent
-  );
+  background: linear-gradient(to bottom,
+      rgba(3, 7, 18, 0.92),
+      rgba(3, 7, 18, 0.7),
+      transparent);
   border-bottom: 1px solid rgba(248, 250, 252, 0.05);
 }
 
@@ -287,8 +285,59 @@
 .section-cta {
   padding-bottom: 4.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .stats-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(8, 145, 178, 0.1));
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.stat-card:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(8, 145, 178, 0.2));
+  border-color: rgba(34, 197, 94, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.2);
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #f97316, #fb923c, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  font-weight: 500;
 }
 
 .cta-box {
@@ -355,4 +404,51 @@
   margin: 0;
   font-size: 0.8rem;
   color: #64748b;
+}
+
+.custom-shape-divider-bottom {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 10;
+  margin-top: auto;
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  filter: blur(1.5px);
+  z-index: 10;
+}
+
+.shape-fill {
+  fill: #38bdf8;
+  opacity: 0.95;
+}
+
+/* Curva adicional para estilo orgánico/ondas */
+.section-hero-wave {
+  display: block;
+
+  position: absolute;
+  bottom: -55px;
+  width: 100dvw;
+  height: 60px;
+  background: linear-gradient(to bottom,
+      rgba(2, 6, 23, 0.7),
+      /* Oscurece un poco para leer el texto */
+      rgba(2, 6, 23, 0.4));
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .custom-shape-divider-bottom svg {
+    height: 80px;
+  }
 }
